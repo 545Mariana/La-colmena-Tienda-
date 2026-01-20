@@ -1,0 +1,25 @@
+<table border="0" width="100%">
+  <tr>
+    <td rowspan="3" width="175" height="21"></td>
+    <td align="center" width="625" height="5">
+      <img src="<%=request.getContextPath()%>/img/bar.png" height="5" width="1280" />
+    </td>
+  </tr>
+
+  <tr>
+    <td align="center" class="toolbar">
+      <a href="index.jsp">Principal</a> |
+      <a href="catalogo.jsp">Catalogo</a> |
+      <a href="misionVision.html">Misión y Vision</a> |
+      <a href="tiendasFisicas.html">Tiendas Fisicas</a> |
+      <a href="contacto.html">Contáctanos</a>
+    </td>
+  </tr>
+
+  <tr>
+    <td class="legal">
+      <br>Copyright (c) Alfa buena maravilla onda dinamita escuadrón lobo 2017
+      <br>Derechos Reservados
+    </td>
+  </tr>
+</table>

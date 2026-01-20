@@ -1,0 +1,87 @@
+body {
+    background-color: #000000; /* Negro de fondo */
+    color: #FFFFFF; /* Texto blanco */
+    background-image: url("../img/background.jpg");
+      background-repeat: no-repeat;        /* Evita que se repita */
+      background-size: cover;              /* Escala para cubrir toda la pantalla */
+      background-attachment: fixed;        /* Mantiene el fondo fijo al hacer scroll */
+      background-position: center center;  /* Centra la imagen */
+    font-family: Helvetica, sans-serif;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.55); /* negro con 55% de opacidad */
+  z-index: -1; /* mantiene el fondo detrás del contenido */
+}
+
+:link {
+    color: #FFD700; /* Dorado */
+}
+
+:vlink {
+    color: #B8860B; /* Dorado oscuro */
+}
+
+:alink {
+    color: #FFFFFF; /* Blanco al hacer clic */
+}
+
+.important {
+    font-weight: bold;
+    color: #FFD700; /* Dorado brillante */
+    display: inline;
+    font-size: smaller;
+}
+
+.section {
+    font-weight: bold;
+    color: #FFD700;
+    margin: 10px 10px 5px 5px;
+}
+
+.step {
+    font-weight: bold;
+    color: #FFFFFF;
+    margin: 5px;
+}
+
+.instructions {
+    font-size: smaller;
+    color: #E0E0E0;
+}
+
+.instructionlist {
+    text-align: left;
+}
+
+.form {
+    background-color: #1A1A1A; /* Negro suave para contraste */
+    border: 2px solid #FFD700; /* Borde dorado elegante */
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.label {
+    font-size: smaller;
+    font-weight: bold;
+    color: #FFD700;
+    margin: 5px;
+}
+
+.item {
+    font-weight: bold;
+    margin: 0 5px 30px 5px;
+    text-align: left;
+    color: #FFFFFF;
+}
+
+.smallitem {
+    font-size: smaller;
+    color: #CCCCCC;
+}

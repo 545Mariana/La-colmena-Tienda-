@@ -1,0 +1,24 @@
+<table border="0" width="100%">
+  <tr>
+    <td rowspan="3" width="175" height="21"></td>
+    <td align="center" width="625" height="5">
+      <img src="<%=request.getContextPath()%>/img/bar.png" height="5" width="1280" />
+    </td>
+  </tr>
+
+  <tr>
+    <td align="center" class="toolbar">
+      <a href="agregar_producto.jsp">Agregar articulo</a> |
+      <a href="editar_producto.jsp">Editar Articulo</a> |
+      <a href="pedidos.jsp">Pedidos</a> |
+      <a href="estadisticas.jsp">Estadisticas</a>
+    </td>
+  </tr>
+
+  <tr>
+    <td class="legal">
+      <br>Copyright (c) Alfa buena maravilla onda dinamita escuadrón lobo 2017
+      <br>Derechos Reservados
+    </td>
+  </tr>
+</table>

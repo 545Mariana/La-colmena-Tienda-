@@ -1,0 +1,31 @@
+<table border="0" cellspacing="0" cellpadding="0" width="100%">
+  <tr>
+    <td align="center" width="160">
+      <img src="<%=request.getContextPath()%>/img/logo.png" height="84" width="158" />
+    </td>
+
+    <td width="15"></td>
+
+    <td align="center" valign="middle" width="625" height="40">
+      <h1 class="title">La Colmena</h1>
+    </td>
+  </tr>
+
+  <tr>
+    <td colspan="2"></td>
+    <td align="center" class="toolbar">
+      <a href="index.jsp">Principal</a> |
+      <a href="catalogo.jsp">Catalogo</a> |
+      <a href="misionVision.html">Misión y Visión</a> |
+      <a href="tiendasFisicas.html">Tiendas Fisicas</a> |
+      <a href="contacto.html">Contáctanos</a>
+    </td>
+  </tr>
+
+  <tr>
+    <td colspan="2"></td>
+    <td align="center" valign="middle" width="625" height="10">
+      <img src="<%=request.getContextPath()%>/img/bar.png" height="5" width="1280" />
+    </td>
+  </tr>
+</table>

@@ -1,0 +1,30 @@
+<%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+
+<c:if test="${ mensaje != null }">
+  <table border="1" cellpadding="10"
+             width="80%" align="center">
+    <tr>
+      <td align="center" class="instructions">
+        ${ mensaje }
+      </td>
+    </tr>
+  </table>
+  <br>
+  <c:remove var="mensaje"/>
+</c:if>
+
+<c:if test="${ errores != null }">
+  <table border="1" width="80%" align="center">
+    <tr>
+      <td class="step">
+        Error de validación:
+        <ul>
+          <c:forEach var="issue" items="${ errores }">
+            <li><c:out value="${ issue }"/></li>
+          </c:forEach>
+        </ul>
+      </td>
+    </tr>
+  </table>
+  <c:remove var="errores"/>
+</c:if>

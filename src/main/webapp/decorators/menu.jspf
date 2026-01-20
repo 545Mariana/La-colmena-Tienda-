@@ -1,0 +1,67 @@
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<table border="0" cellspacing="0" cellpadding="5" width="160" style="border-radius: 8px;">
+  
+  <!-- Login/Logout seg�n estado de sesi�n -->
+  <tr>
+    <td align="center" class="menu">
+      <c:choose>
+        <c:when test="${empty sessionScope.nombre}">
+          <!-- Usuario NO logueado: mostrar Login -->
+          <a href="${pageContext.request.contextPath}/login.jsp">Login</a>
+        </c:when>
+        <c:otherwise>
+          <!-- Usuario logueado: mostrar Logout y nombre -->
+          <span style="color: green; font-weight: bold;">
+            ${sessionScope.nombre}
+          </span>
+          | 
+          <form action="${pageContext.request.contextPath}/login" method="post" style="display: inline;">
+            <input type="hidden" name="action" value="logout">
+            <button type="submit" style="background: none; border: none; color: blue; text-decoration: underline; cursor: pointer; padding: 0;">
+              Logout
+            </button>
+          </form>
+        </c:otherwise>
+      </c:choose>
+    </td>
+  </tr>
+
+  <!-- Registrarse (solo si NO est� logueado) -->
+  <c:if test="${empty sessionScope.nombre}">
+    <tr>
+      <td align="center" class="menu">
+        <a href="${pageContext.request.contextPath}/creacion_de_cuenta.jsp">Registrarse</a>
+      </td>
+    </tr>
+  </c:if>
+
+  <!-- Carrito (solo si EST� logueado) -->
+  <c:if test="${not empty sessionScope.nombre}">
+    <tr>
+      <td align="center" class="menu">
+        <a href="${pageContext.request.contextPath}/carrito">Carrito</a>
+      </td>
+    </tr>
+  </c:if>
+  
+   <c:if test="${not empty sessionScope.nombre}">
+    <tr>
+      <td align="center" class="menu">
+        <a href="${pageContext.request.contextPath}/MisPedidos">Mis Pedidos</a>
+      </td>
+    </tr>
+  </c:if>
+
+  <!-- Opciones adicionales para usuario logueado -->
+  <c:if test="${not empty sessionScope.nombre}">
+    <tr>
+      <td align="center" class="menu">
+        <a href="${pageContext.request.contextPath}/editar_cuenta.jsp">Mi Cuenta</a>
+      </td>
+    </tr>
+
+  </c:if>
+
+ 
+
+</table>
